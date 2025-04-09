@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nOiuDfLOzUo=",
+  "dgSpecHash": "1ZHd1C0jYcQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Duong\\Downloads\\InternshipManagementSystemBackend\\InternshipManagementSystemBackend\\InternshipManagementSystem.Infrastructure\\InternshipManagementSystem.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\Duong\\Documents\\Zalo Received Files\\InternshipManagementSystemBackend\\InternshipManagementSystemBackend\\InternshipManagementSystem.Infrastructure\\InternshipManagementSystem.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Duong\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Duong\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

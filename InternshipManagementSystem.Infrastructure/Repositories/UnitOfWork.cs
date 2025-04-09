@@ -1,7 +1,6 @@
-﻿// UnitOfWork.cs
-using InternshipManagementSystem.Core.Entities;
+﻿using InternshipManagementSystem.Core.Entities;
 using InternshipManagementSystem.Core.Interfaces;
-using InternshipManagementSystem.Infrastructure.Data;
+using InternshipManagementSystem.Infrastructure.Data; // Thêm namespace
 
 namespace InternshipManagementSystem.Infrastructure.Repositories
 {
@@ -11,17 +10,38 @@ namespace InternshipManagementSystem.Infrastructure.Repositories
         private IRepository<SinhVien> _sinhViens;
         private IRepository<DoanhNghiep> _doanhNghieps;
         private IRepository<DangKyThucTap> _dangKyThucTaps;
-        private IRepository<Admin> _admins;
+        private IRepository<ViTriThucTap> _viTriThucTaps;
+        private IRepository<Admin> _admins; 
 
         public UnitOfWork(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        public IRepository<SinhVien> SinhViens => _sinhViens ??= new Repository<SinhVien>(_context);
-        public IRepository<DoanhNghiep> DoanhNghieps => _doanhNghieps ??= new Repository<DoanhNghiep>(_context);
-        public IRepository<DangKyThucTap> DangKyThucTaps => _dangKyThucTaps ??= new Repository<DangKyThucTap>(_context);
-        public IRepository<Admin> Admins => _admins ??= new Repository<Admin>(_context);
+        public IRepository<SinhVien> SinhViens
+        {
+            get { return _sinhViens ??= new Repository<SinhVien>(_context); }
+        }
+
+        public IRepository<DoanhNghiep> DoanhNghieps
+        {
+            get { return _doanhNghieps ??= new Repository<DoanhNghiep>(_context); }
+        }
+
+        public IRepository<DangKyThucTap> DangKyThucTaps
+        {
+            get { return _dangKyThucTaps ??= new Repository<DangKyThucTap>(_context); }
+        }
+
+        public IRepository<ViTriThucTap> ViTriThucTaps
+        {
+            get { return _viTriThucTaps ??= new Repository<ViTriThucTap>(_context); }
+        }
+
+        public IRepository<Admin> Admins 
+        {
+            get { return _admins ??= new Repository<Admin>(_context); }
+        }
 
         public async Task<int> CompleteAsync()
         {

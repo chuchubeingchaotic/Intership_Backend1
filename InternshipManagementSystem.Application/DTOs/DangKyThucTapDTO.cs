@@ -1,17 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace InternshipManagementSystem.Application.DTOs
 {
     public class DangKyThucTapDTO
     {
         public Guid DkttId { get; set; }
-        public string Email { get; set; } = string.Empty; 
+        public Guid SvId { get; set; }
+        public SinhVienDTO SinhVien { get; set; }
         public Guid DnId { get; set; }
+        public DoanhNghiepDTO DoanhNghiep { get; set; }
+        public Guid? VtId { get; set; } 
+        public ViTriThucTapDto ViTriThucTap { get; set; }
         public DateTime NgayDangKy { get; set; }
-        public string TrangThai { get; set; } = string.Empty;
+        public string TrangThai { get; set; }
+        public string Email { get; set; }
     }
 }

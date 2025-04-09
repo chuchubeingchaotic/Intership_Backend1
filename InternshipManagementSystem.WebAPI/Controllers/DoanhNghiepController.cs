@@ -35,7 +35,7 @@ namespace InternshipManagementSystem.WebAPI.Controllers
         }
 
         [HttpPost]
-        [AllowAnonymous] // Cho phép truy cập mà không cần xác thực
+        [AllowAnonymous] 
         public async Task<IActionResult> Create([FromBody] DoanhNghiepDTO doanhNghiepDTO)
         {
             var existingDoanhNghiep = await _unitOfWork.DoanhNghieps.FirstOrDefaultAsync(d => d.Email == doanhNghiepDTO.Email);

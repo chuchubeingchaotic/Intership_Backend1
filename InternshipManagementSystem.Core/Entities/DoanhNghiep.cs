@@ -8,7 +8,7 @@
         public string SoDT { get; set; } = string.Empty;
         public string Email { get; set; } = string.Empty;
         public string MatKhau { get; set; } = string.Empty;
-
+        public List<ViTriThucTap> ViTriThucTaps { get; set; } = new List<ViTriThucTap>();
         public List<DangKyThucTap> DangKyThucTaps { get; set; } = new List<DangKyThucTap>();
     }
 }

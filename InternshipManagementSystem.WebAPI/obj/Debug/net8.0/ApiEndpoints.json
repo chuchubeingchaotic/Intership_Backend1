@@ -34,29 +34,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "dangKyThucTapDTO",
-        "Type": "InternshipManagementSystem.Application.DTOs.DangKyThucTapDTO",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "InternshipManagementSystem.WebAPI.Controllers.DangKyThucTapController",
-    "Method": "Update",
-    "RelativePath": "api/DangKyThucTap/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": true
-      },
-      {
-        "Name": "dangKyThucTapDTO",
-        "Type": "InternshipManagementSystem.Application.DTOs.DangKyThucTapDTO",
+        "Name": "dangKyDTO",
+        "Type": "InternshipManagementSystem.Application.DTOs.DangKyThucTapCreateDTO",
         "IsRequired": true
       }
     ],
@@ -80,7 +59,28 @@
   },
   {
     "ContainingType": "InternshipManagementSystem.WebAPI.Controllers.DangKyThucTapController",
-    "Method": "GetAllDoanhNghieps",
+    "Method": "UpdateStatus",
+    "RelativePath": "api/DangKyThucTap/{id}/status",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "statusDTO",
+        "Type": "InternshipManagementSystem.Application.DTOs.UpdateDangKyStatusDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "InternshipManagementSystem.WebAPI.Controllers.DangKyThucTapController",
+    "Method": "GetDoanhNghieps",
     "RelativePath": "api/DangKyThucTap/doanh-nghieps",
     "HttpMethod": "GET",
     "IsController": true,
@@ -202,6 +202,69 @@
     "ContainingType": "InternshipManagementSystem.WebAPI.Controllers.SinhVienController",
     "Method": "Delete",
     "RelativePath": "api/SinhVien/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "InternshipManagementSystem.WebAPI.Controllers.ViTriThucTapController",
+    "Method": "GetAll",
+    "RelativePath": "api/ViTriThucTap",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "InternshipManagementSystem.WebAPI.Controllers.ViTriThucTapController",
+    "Method": "Create",
+    "RelativePath": "api/ViTriThucTap",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "viTriDTO",
+        "Type": "InternshipManagementSystem.Application.DTOs.ViTriThucTapDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "InternshipManagementSystem.WebAPI.Controllers.ViTriThucTapController",
+    "Method": "Update",
+    "RelativePath": "api/ViTriThucTap/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "viTriDTO",
+        "Type": "InternshipManagementSystem.Application.DTOs.ViTriThucTapDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "InternshipManagementSystem.WebAPI.Controllers.ViTriThucTapController",
+    "Method": "Delete",
+    "RelativePath": "api/ViTriThucTap/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,

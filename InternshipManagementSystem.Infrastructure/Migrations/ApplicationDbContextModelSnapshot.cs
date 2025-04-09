@@ -17,7 +17,7 @@ namespace InternshipManagementSystem.Infrastructure.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "9.0.3")
+                .HasAnnotation("ProductVersion", "8.0.14")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -168,6 +168,37 @@ namespace InternshipManagementSystem.Infrastructure.Migrations
                     b.ToTable("SinhViens");
                 });
 
+            modelBuilder.Entity("InternshipManagementSystem.Core.Entities.ViTriThucTap", b =>
+                {
+                    b.Property<Guid>("VtId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("DnId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("MoTa")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("SoLuongTuyen")
+                        .HasColumnType("int");
+
+                    b.Property<string>("TenViTri")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("YeuCau")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("VtId");
+
+                    b.HasIndex("DnId");
+
+                    b.ToTable("ViTriThucTaps");
+                });
+
             modelBuilder.Entity("InternshipManagementSystem.Core.Entities.DangKyThucTap", b =>
                 {
                     b.HasOne("InternshipManagementSystem.Core.Entities.DoanhNghiep", "DoanhNghiep")
@@ -185,6 +216,17 @@ namespace InternshipManagementSystem.Infrastructure.Migrations
                     b.Navigation("DoanhNghiep");
 
                     b.Navigation("SinhVien");
+                });
+
+            modelBuilder.Entity("InternshipManagementSystem.Core.Entities.ViTriThucTap", b =>
+                {
+                    b.HasOne("InternshipManagementSystem.Core.Entities.DoanhNghiep", "DoanhNghiep")
+                        .WithMany()
+                        .HasForeignKey("DnId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("DoanhNghiep");
                 });
 
             modelBuilder.Entity("InternshipManagementSystem.Core.Entities.DoanhNghiep", b =>

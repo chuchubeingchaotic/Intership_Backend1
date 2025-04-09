@@ -1,7 +1,8 @@
 ﻿using InternshipManagementSystem.Application.DTOs;
+using InternshipManagementSystem.Core.Entities;
 using InternshipManagementSystem.Core.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore; // Thêm using này
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -25,39 +26,53 @@ namespace InternshipManagementSystem.WebAPI.Controllers
         [HttpPost("Login")]
         public async Task<IActionResult> Login([FromBody] LoginDTO loginDTO)
         {
-            if (string.IsNullOrEmpty(loginDTO.Email) || string.IsNullOrEmpty(loginDTO.MatKhau) || string.IsNullOrEmpty(loginDTO.Role))
+            if (string.IsNullOrEmpty(loginDTO.Email) || string.IsNullOrEmpty(loginDTO.MatKhau))
             {
-                return BadRequest("Email, password, and role are required.");
+                return BadRequest("Email và mật khẩu là bắt buộc.");
             }
 
+            string role = null;
             object user = null;
-            switch (loginDTO.Role)
+
+            // Kiểm tra email trong bảng SinhViens
+            user = await _unitOfWork.SinhViens.GetAllAsync()
+                .FirstOrDefaultAsync(s => s.Email == loginDTO.Email && s.MatKhau == loginDTO.MatKhau);
+            if (user != null)
             {
-                case "SinhVien":
-                    user = await _unitOfWork.SinhViens.GetAllAsync()
-                        .FirstOrDefaultAsync(s => s.Email == loginDTO.Email && s.MatKhau == loginDTO.MatKhau);
-                    break;
-                case "DoanhNghiep":
-                    user = await _unitOfWork.DoanhNghieps.GetAllAsync()
-                        .FirstOrDefaultAsync(d => d.Email == loginDTO.Email && d.MatKhau == loginDTO.MatKhau);
-                    break;
-                case "Admin":
-                    user = await _unitOfWork.Admins.GetAllAsync()
-                        .FirstOrDefaultAsync(a => a.Email == loginDTO.Email && a.MatKhau == loginDTO.MatKhau);
-                    break;
-                default:
-                    return BadRequest("Invalid role.");
+                role = "SinhVien";
+            }
+
+            // Nếu không tìm thấy trong SinhViens, kiểm tra trong DoanhNghieps
+            if (user == null)
+            {
+                user = await _unitOfWork.DoanhNghieps.GetAllAsync()
+                    .FirstOrDefaultAsync(d => d.Email == loginDTO.Email && d.MatKhau == loginDTO.MatKhau);
+                if (user != null)
+                {
+                    role = "DoanhNghiep";
+                }
+            }
+
+            // Nếu không tìm thấy trong DoanhNghieps, kiểm tra trong Admins
+            if (user == null)
+            {
+                user = await _unitOfWork.Admins.GetAllAsync()
+                    .FirstOrDefaultAsync(a => a.Email == loginDTO.Email && a.MatKhau == loginDTO.MatKhau);
+                if (user != null)
+                {
+                    role = "Admin";
+                }
             }
 
             if (user == null)
             {
-                return Unauthorized("Invalid email or password.");
+                return Unauthorized("Email hoặc mật khẩu không đúng.");
             }
 
             var claims = new[]
             {
                 new Claim(ClaimTypes.Email, loginDTO.Email),
-                new Claim(ClaimTypes.Role, loginDTO.Role)
+                new Claim(ClaimTypes.Role, role)
             };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
@@ -73,7 +88,7 @@ namespace InternshipManagementSystem.WebAPI.Controllers
             return Ok(new
             {
                 token = new JwtSecurityTokenHandler().WriteToken(token),
-                role = loginDTO.Role
+                role = role // Trả về role để frontend điều hướng
             });
         }
     }

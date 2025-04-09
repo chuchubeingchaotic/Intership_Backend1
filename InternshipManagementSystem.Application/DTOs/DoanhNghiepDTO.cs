@@ -14,5 +14,6 @@ namespace InternshipManagementSystem.Application.DTOs
         public string SoDT { get; set; } = string.Empty;
         public string Email { get; set; } = string.Empty;
         public string MatKhau { get; set; } = string.Empty;
+        public List<ViTriThucTapDto> ViTriThucTaps { get; set; }
     }
 }

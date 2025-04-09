@@ -14,6 +14,7 @@ namespace InternshipManagementSystem.Core.Interfaces
         IRepository<DoanhNghiep> DoanhNghieps { get; }
         IRepository<DangKyThucTap> DangKyThucTaps { get; }
         IRepository<Admin> Admins { get; }
+        IRepository<ViTriThucTap> ViTriThucTaps { get; }
         Task<int> CompleteAsync();
     }
 }

@@ -13,6 +13,7 @@ namespace InternshipManagementSystem.Infrastructure.Data
         public DbSet<DoanhNghiep> DoanhNghieps { get; set; }
         public DbSet<DangKyThucTap> DangKyThucTaps { get; set; }
         public DbSet<Admin> Admins { get; set; }
+        public DbSet<ViTriThucTap> ViTriThucTaps { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

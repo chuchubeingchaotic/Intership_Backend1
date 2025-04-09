@@ -36,6 +36,18 @@
         }
       }
     },
+    "/api/DangKyThucTap/doanh-nghieps": {
+      "get": {
+        "tags": [
+          "DangKyThucTap"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/DangKyThucTap": {
       "get": {
         "tags": [
@@ -55,17 +67,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/DangKyThucTapDTO"
+                "$ref": "#/components/schemas/DangKyThucTapCreateDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/DangKyThucTapDTO"
+                "$ref": "#/components/schemas/DangKyThucTapCreateDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/DangKyThucTapDTO"
+                "$ref": "#/components/schemas/DangKyThucTapCreateDTO"
               }
             }
           }
@@ -78,46 +90,6 @@
       }
     },
     "/api/DangKyThucTap/{id}": {
-      "put": {
-        "tags": [
-          "DangKyThucTap"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "format": "uuid"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/DangKyThucTapDTO"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/DangKyThucTapDTO"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/DangKyThucTapDTO"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
       "delete": {
         "tags": [
           "DangKyThucTap"
@@ -140,11 +112,41 @@
         }
       }
     },
-    "/api/DangKyThucTap/doanh-nghieps": {
-      "get": {
+    "/api/DangKyThucTap/{id}/status": {
+      "put": {
         "tags": [
           "DangKyThucTap"
         ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateDangKyStatusDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateDangKyStatusDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateDangKyStatusDTO"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -359,32 +361,120 @@
           }
         }
       }
+    },
+    "/api/ViTriThucTap": {
+      "get": {
+        "tags": [
+          "ViTriThucTap"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "ViTriThucTap"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ViTriThucTapDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ViTriThucTapDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ViTriThucTapDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ViTriThucTap/{id}": {
+      "put": {
+        "tags": [
+          "ViTriThucTap"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ViTriThucTapDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ViTriThucTapDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ViTriThucTapDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "ViTriThucTap"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {
     "schemas": {
-      "DangKyThucTapDTO": {
+      "DangKyThucTapCreateDTO": {
         "type": "object",
         "properties": {
-          "dkttId": {
+          "vtId": {
             "type": "string",
             "format": "uuid"
-          },
-          "email": {
-            "type": "string",
-            "nullable": true
-          },
-          "dnId": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "ngayDangKy": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "trangThai": {
-            "type": "string",
-            "nullable": true
           }
         },
         "additionalProperties": false
@@ -415,6 +505,13 @@
           "matKhau": {
             "type": "string",
             "nullable": true
+          },
+          "viTriThucTaps": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ViTriThucTapDto"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -427,10 +524,6 @@
             "nullable": true
           },
           "matKhau": {
-            "type": "string",
-            "nullable": true
-          },
-          "role": {
             "type": "string",
             "nullable": true
           }
@@ -471,6 +564,46 @@
           "gpa": {
             "type": "number",
             "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateDangKyStatusDTO": {
+        "type": "object",
+        "properties": {
+          "trangThai": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ViTriThucTapDto": {
+        "type": "object",
+        "properties": {
+          "vtId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "doanhNghiepId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "tenViTri": {
+            "type": "string",
+            "nullable": true
+          },
+          "moTa": {
+            "type": "string",
+            "nullable": true
+          },
+          "soLuong": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "yeuCau": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
