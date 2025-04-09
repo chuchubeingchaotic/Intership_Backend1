@@ -1,12 +1,11 @@
 {
   "Version": 1,
-  "Hash": "8XuH5GSAQNAMSsUqskuoRYPIIahP8KEDOVVHmmhC/9w=",
+  "Hash": "AxAB3gajR6443O4GJWZJo3eGe4hC3GfiqetDDU6mmfw=",
   "Source": "InternshipManagementSystem.WebAPI",
   "BasePath": "_content/InternshipManagementSystem.WebAPI",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "Assets": []
 }

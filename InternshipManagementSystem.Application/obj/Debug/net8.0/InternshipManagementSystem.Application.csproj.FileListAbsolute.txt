@@ -131,3 +131,4 @@ C:\Users\PC\Documents\Zalo Received Files\Web\InternshipManagementSystemBackend\
 C:\Users\PC\Documents\Zalo Received Files\Web\InternshipManagementSystemBackend\InternshipManagementSystem.Application\obj\Debug\net8.0\InternshipManagementSystem.Application.pdb
 C:\Users\PC\Documents\Zalo Received Files\Web\InternshipManagementSystemBackend\InternshipManagementSystem.Application\obj\Debug\net8.0\InternshipManagementSystem.Application.genruntimeconfig.cache
 C:\Users\PC\Documents\Zalo Received Files\Web\InternshipManagementSystemBackend\InternshipManagementSystem.Application\obj\Debug\net8.0\ref\InternshipManagementSystem.Application.dll
+C:\Users\Admin\Documents\Năm 2 kì 2\CNLTW\InternshipManagementSystemBackend\InternshipManagementSystem.Application\obj\Debug\net8.0\InternshipManagementSystem.Application.sourcelink.json

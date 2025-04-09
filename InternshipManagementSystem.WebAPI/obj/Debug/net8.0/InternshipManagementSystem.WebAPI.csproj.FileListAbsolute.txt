@@ -1112,3 +1112,4 @@ C:\Users\PC\Documents\Zalo Received Files\Web\InternshipManagementSystemBackend\
 C:\Users\PC\Documents\Zalo Received Files\Web\InternshipManagementSystemBackend\InternshipManagementSystem.WebAPI\obj\Debug\net8.0\InternshipManagementSystem.WebAPI.pdb
 C:\Users\PC\Documents\Zalo Received Files\Web\InternshipManagementSystemBackend\InternshipManagementSystem.WebAPI\obj\Debug\net8.0\InternshipManagementSystem.WebAPI.genruntimeconfig.cache
 C:\Users\PC\Documents\Zalo Received Files\Web\InternshipManagementSystemBackend\InternshipManagementSystem.WebAPI\obj\Debug\net8.0\ref\InternshipManagementSystem.WebAPI.dll
+C:\Users\Admin\Documents\Năm 2 kì 2\CNLTW\InternshipManagementSystemBackend\InternshipManagementSystem.WebAPI\obj\Debug\net8.0\InternshipManagementSystem.WebAPI.sourcelink.json

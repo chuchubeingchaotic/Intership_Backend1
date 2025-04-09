@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Duong\\Documents\\Zalo Received Files\\InternshipManagementSystemBackend\\InternshipManagementSystemBackend\\InternshipManagementSystem.Tests\\InternshipManagementSystem.Tests.csproj": {}
+    "C:\\Users\\Admin\\Documents\\Năm 2 kì 2\\CNLTW\\InternshipManagementSystemBackend\\InternshipManagementSystem.Tests\\InternshipManagementSystem.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Duong\\Documents\\Zalo Received Files\\InternshipManagementSystemBackend\\InternshipManagementSystemBackend\\InternshipManagementSystem.Core\\InternshipManagementSystem.Core.csproj": {
+    "C:\\Users\\Admin\\Documents\\Năm 2 kì 2\\CNLTW\\InternshipManagementSystemBackend\\InternshipManagementSystem.Core\\InternshipManagementSystem.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Duong\\Documents\\Zalo Received Files\\InternshipManagementSystemBackend\\InternshipManagementSystemBackend\\InternshipManagementSystem.Core\\InternshipManagementSystem.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Documents\\Năm 2 kì 2\\CNLTW\\InternshipManagementSystemBackend\\InternshipManagementSystem.Core\\InternshipManagementSystem.Core.csproj",
         "projectName": "InternshipManagementSystem.Core",
-        "projectPath": "C:\\Users\\Duong\\Documents\\Zalo Received Files\\InternshipManagementSystemBackend\\InternshipManagementSystemBackend\\InternshipManagementSystem.Core\\InternshipManagementSystem.Core.csproj",
-        "packagesPath": "C:\\Users\\Duong\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Duong\\Documents\\Zalo Received Files\\InternshipManagementSystemBackend\\InternshipManagementSystemBackend\\InternshipManagementSystem.Core\\obj\\",
+        "projectPath": "C:\\Users\\Admin\\Documents\\Năm 2 kì 2\\CNLTW\\InternshipManagementSystemBackend\\InternshipManagementSystem.Core\\InternshipManagementSystem.Core.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\Documents\\Năm 2 kì 2\\CNLTW\\InternshipManagementSystemBackend\\InternshipManagementSystem.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Duong\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -43,8 +44,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.200"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -103,24 +103,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Duong\\Documents\\Zalo Received Files\\InternshipManagementSystemBackend\\InternshipManagementSystemBackend\\InternshipManagementSystem.Infrastructure\\InternshipManagementSystem.Infrastructure.csproj": {
+    "C:\\Users\\Admin\\Documents\\Năm 2 kì 2\\CNLTW\\InternshipManagementSystemBackend\\InternshipManagementSystem.Infrastructure\\InternshipManagementSystem.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Duong\\Documents\\Zalo Received Files\\InternshipManagementSystemBackend\\InternshipManagementSystemBackend\\InternshipManagementSystem.Infrastructure\\InternshipManagementSystem.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Documents\\Năm 2 kì 2\\CNLTW\\InternshipManagementSystemBackend\\InternshipManagementSystem.Infrastructure\\InternshipManagementSystem.Infrastructure.csproj",
         "projectName": "InternshipManagementSystem.Infrastructure",
-        "projectPath": "C:\\Users\\Duong\\Documents\\Zalo Received Files\\InternshipManagementSystemBackend\\InternshipManagementSystemBackend\\InternshipManagementSystem.Infrastructure\\InternshipManagementSystem.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\Duong\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Duong\\Documents\\Zalo Received Files\\InternshipManagementSystemBackend\\InternshipManagementSystemBackend\\InternshipManagementSystem.Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\Admin\\Documents\\Năm 2 kì 2\\CNLTW\\InternshipManagementSystemBackend\\InternshipManagementSystem.Infrastructure\\InternshipManagementSystem.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\Documents\\Năm 2 kì 2\\CNLTW\\InternshipManagementSystemBackend\\InternshipManagementSystem.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Duong\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -129,14 +129,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Duong\\Documents\\Zalo Received Files\\InternshipManagementSystemBackend\\InternshipManagementSystemBackend\\InternshipManagementSystem.Core\\InternshipManagementSystem.Core.csproj": {
-                "projectPath": "C:\\Users\\Duong\\Documents\\Zalo Received Files\\InternshipManagementSystemBackend\\InternshipManagementSystemBackend\\InternshipManagementSystem.Core\\InternshipManagementSystem.Core.csproj"
+              "C:\\Users\\Admin\\Documents\\Năm 2 kì 2\\CNLTW\\InternshipManagementSystemBackend\\InternshipManagementSystem.Core\\InternshipManagementSystem.Core.csproj": {
+                "projectPath": "C:\\Users\\Admin\\Documents\\Năm 2 kì 2\\CNLTW\\InternshipManagementSystemBackend\\InternshipManagementSystem.Core\\InternshipManagementSystem.Core.csproj"
               }
             }
           }
@@ -150,8 +151,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.200"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -206,24 +206,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Duong\\Documents\\Zalo Received Files\\InternshipManagementSystemBackend\\InternshipManagementSystemBackend\\InternshipManagementSystem.Tests\\InternshipManagementSystem.Tests.csproj": {
+    "C:\\Users\\Admin\\Documents\\Năm 2 kì 2\\CNLTW\\InternshipManagementSystemBackend\\InternshipManagementSystem.Tests\\InternshipManagementSystem.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Duong\\Documents\\Zalo Received Files\\InternshipManagementSystemBackend\\InternshipManagementSystemBackend\\InternshipManagementSystem.Tests\\InternshipManagementSystem.Tests.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Documents\\Năm 2 kì 2\\CNLTW\\InternshipManagementSystemBackend\\InternshipManagementSystem.Tests\\InternshipManagementSystem.Tests.csproj",
         "projectName": "InternshipManagementSystem.Tests",
-        "projectPath": "C:\\Users\\Duong\\Documents\\Zalo Received Files\\InternshipManagementSystemBackend\\InternshipManagementSystemBackend\\InternshipManagementSystem.Tests\\InternshipManagementSystem.Tests.csproj",
-        "packagesPath": "C:\\Users\\Duong\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Duong\\Documents\\Zalo Received Files\\InternshipManagementSystemBackend\\InternshipManagementSystemBackend\\InternshipManagementSystem.Tests\\obj\\",
+        "projectPath": "C:\\Users\\Admin\\Documents\\Năm 2 kì 2\\CNLTW\\InternshipManagementSystemBackend\\InternshipManagementSystem.Tests\\InternshipManagementSystem.Tests.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\Documents\\Năm 2 kì 2\\CNLTW\\InternshipManagementSystemBackend\\InternshipManagementSystem.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Duong\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -232,17 +232,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Duong\\Documents\\Zalo Received Files\\InternshipManagementSystemBackend\\InternshipManagementSystemBackend\\InternshipManagementSystem.Core\\InternshipManagementSystem.Core.csproj": {
-                "projectPath": "C:\\Users\\Duong\\Documents\\Zalo Received Files\\InternshipManagementSystemBackend\\InternshipManagementSystemBackend\\InternshipManagementSystem.Core\\InternshipManagementSystem.Core.csproj"
+              "C:\\Users\\Admin\\Documents\\Năm 2 kì 2\\CNLTW\\InternshipManagementSystemBackend\\InternshipManagementSystem.Core\\InternshipManagementSystem.Core.csproj": {
+                "projectPath": "C:\\Users\\Admin\\Documents\\Năm 2 kì 2\\CNLTW\\InternshipManagementSystemBackend\\InternshipManagementSystem.Core\\InternshipManagementSystem.Core.csproj"
               },
-              "C:\\Users\\Duong\\Documents\\Zalo Received Files\\InternshipManagementSystemBackend\\InternshipManagementSystemBackend\\InternshipManagementSystem.Infrastructure\\InternshipManagementSystem.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\Duong\\Documents\\Zalo Received Files\\InternshipManagementSystemBackend\\InternshipManagementSystemBackend\\InternshipManagementSystem.Infrastructure\\InternshipManagementSystem.Infrastructure.csproj"
+              "C:\\Users\\Admin\\Documents\\Năm 2 kì 2\\CNLTW\\InternshipManagementSystemBackend\\InternshipManagementSystem.Infrastructure\\InternshipManagementSystem.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Admin\\Documents\\Năm 2 kì 2\\CNLTW\\InternshipManagementSystemBackend\\InternshipManagementSystem.Infrastructure\\InternshipManagementSystem.Infrastructure.csproj"
               }
             }
           }
@@ -256,8 +257,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.200"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -304,7 +304,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

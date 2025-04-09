@@ -67,17 +67,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/DangKyThucTapCreateDTO"
+                "$ref": "#/components/schemas/DangKyThucTapDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/DangKyThucTapCreateDTO"
+                "$ref": "#/components/schemas/DangKyThucTapDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/DangKyThucTapCreateDTO"
+                "$ref": "#/components/schemas/DangKyThucTapDTO"
               }
             }
           }
@@ -469,12 +469,46 @@
   },
   "components": {
     "schemas": {
-      "DangKyThucTapCreateDTO": {
+      "DangKyThucTapDTO": {
         "type": "object",
         "properties": {
-          "vtId": {
+          "dkttId": {
             "type": "string",
             "format": "uuid"
+          },
+          "svId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "sinhVien": {
+            "$ref": "#/components/schemas/SinhVienDTO"
+          },
+          "dnId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "doanhNghiep": {
+            "$ref": "#/components/schemas/DoanhNghiepDTO"
+          },
+          "viTriThucTapId": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          },
+          "viTriThucTap": {
+            "$ref": "#/components/schemas/ViTriThucTapDto"
+          },
+          "ngayDangKy": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "trangThai": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

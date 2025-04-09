@@ -11,7 +11,7 @@ namespace InternshipManagementSystem.Infrastructure.Repositories
         private IRepository<DoanhNghiep> _doanhNghieps;
         private IRepository<DangKyThucTap> _dangKyThucTaps;
         private IRepository<ViTriThucTap> _viTriThucTaps;
-        private IRepository<Admin> _admins; 
+        private IRepository<Admin> _admins; // Thêm field
 
         public UnitOfWork(ApplicationDbContext context)
         {
@@ -38,7 +38,7 @@ namespace InternshipManagementSystem.Infrastructure.Repositories
             get { return _viTriThucTaps ??= new Repository<ViTriThucTap>(_context); }
         }
 
-        public IRepository<Admin> Admins 
+        public IRepository<Admin> Admins // Triển khai thuộc tính
         {
             get { return _admins ??= new Repository<Admin>(_context); }
         }
